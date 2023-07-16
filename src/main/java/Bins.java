@@ -1,7 +1,22 @@
 
 public class Bins {
-    //stores
-    //each number has a bin
-    //so when we roll a 7, goes into bin for 7
+
+    int minBin;
+    int maxBin;
+
+    private int[] bins;
+    public Bins(int minBin, int maxBin) {
+        int numberOfBins = maxBin - minBin +1;
+        bins = new int[numberOfBins];
+
+    }
+
+    public int getMinBin(int bin) {
+        return bins[bin];
+    }
+
+    public void incrementBin(int bin) {
+        bins[bin]++;
+    }
 
 }

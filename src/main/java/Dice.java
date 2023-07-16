@@ -6,19 +6,20 @@ public class Dice {
 
     //have to create constructor
     //could create more parameters... like sides of dice
-    int numDice;
-    int numSides;
+    public int numDice;
+   // public int numSides;
 
 
 
     Dice(int totalDice) {
-        this.numDice = totalDice;
-    }
 
-    Dice(int totalDice, int totalSides) {
-        this.numDice = totalDice;
-        this.numSides =totalSides;
-    }
+        numDice = totalDice;
+   }
+
+    /*Dice(int totalDice, int totalSides) {
+        numDice = totalDice;
+        numSides =totalSides;
+    }*/
 
     //method for get a random number between 1-6
     public int getRoll() {
@@ -30,16 +31,14 @@ public class Dice {
     }
 
     //method for how many dice we are rolling
-    //sum is only being used in toss and sum
-    //call get roll
+
     public int toosAndSum() {
 
         int sum =0;
 
-        //initialize and assigning
-        int totalDice = this.numDice;
 
-        //could just repalce totalDice with this.numDice
+        int totalDice = numDice;
+        //using get roll method ...we are keep track of the of the sum
         for (int i=0; i<totalDice; i++) {
             sum+=getRoll();
 
@@ -49,16 +48,7 @@ public class Dice {
     }
 
 
-    public static void main(String[] args) {
-
-        Dice dice1 = new Dice(2);
-        Dice dice2 = new Dice(20,5);
-
-        //we are calling method toss and sum on object instance
-        System.out.println(dice1.toosAndSum());
-        System.out.println(dice2.toosAndSum());
-    }
 }
 
-//for testing random want to make sure
+
 
