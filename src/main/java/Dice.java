@@ -7,19 +7,20 @@ public class Dice {
     //have to create constructor
     //could create more parameters... like sides of dice
     public int numDice;
-   // public int numSides;
+    public int numSides;
 
 
 
     Dice(int totalDice) {
 
         numDice = totalDice;
+        numSides =6;
    }
 
-    /*Dice(int totalDice, int totalSides) {
+    Dice(int totalDice, int totalSides) {
         numDice = totalDice;
         numSides =totalSides;
-    }*/
+    }
 
     //method for get a random number between 1-6
     public int getRoll() {
