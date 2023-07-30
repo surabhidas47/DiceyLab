@@ -1,9 +1,11 @@
+import org.junit.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DiceTest {
 
-    @org.junit.jupiter.api.Test
-    void getRoll() {
+    @Test
+    public void getRoll() {
         //we made dice object!!
         Dice testDice = new Dice(1);
         boolean actual = false;
@@ -19,16 +21,16 @@ class DiceTest {
         assertEquals(true, actual);
     }
 
-    @org.junit.jupiter.api.Test
-    void toosAndSum() {
+    @Test
+    public void toosAndSum() {
 
         Dice testSum = new Dice(2);
         boolean actual = false;
         int testVal;
 
-        testVal = testSum.toosAndSum();
+        testVal = testSum.tossAndSum();
 
-        //gives us two numbers, because two seperate rolls
+
         if ((testVal > 1) && (testVal < 13)) {
             actual = true;
 
